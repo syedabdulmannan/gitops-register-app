@@ -28,6 +28,20 @@ $ sudo service sshd reload
 $ ssh-keygen OR $ ssh-keygen -t ed25519
 $ cd .ssh
 
+sudo nano /etc/ssh/sshd-config
+uncomment authorizekey and public authentication
+
+sudo service sshd reload
+
+## docker
+sudo apt-get install docker.io -y
+sudo usermod -aG docker $USER
+sudo init 6 #reboot
+sudo nano /etc/ssh/sshd-config
+uncomment authorizekey and public authentication
+
+sudo service sshd reload
+
 ============================================================= Install and Configure the SonarQube =============================================================
 ## Update Package Repository and Upgrade Packages
     $ sudo apt update
