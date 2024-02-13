@@ -32,6 +32,10 @@ sudo nano /etc/ssh/sshd-config
 uncomment authorizekey and public authentication
 
 sudo service sshd reload
+cd .ssh/
+ls
+copy the id_rsa.pub key
+
 
 ## docker
 sudo apt-get install docker.io -y
@@ -41,6 +45,14 @@ sudo nano /etc/ssh/sshd-config
 uncomment authorizekey and public authentication
 
 sudo service sshd reload
+
+cd .ssh/
+ls
+
+open the authorized key file
+and paste the id_rsa.pub key
+
+we are adding the public key of the master node
 
 ============================================================= Install and Configure the SonarQube =============================================================
 ## Update Package Repository and Upgrade Packages
